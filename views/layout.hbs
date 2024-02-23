@@ -11,12 +11,16 @@
 
 <body>
 <header>
+  <a href="/">
+      <img class="nav-img" src="/images/moviesWatchlist-logo.png" alt="logo">
+      </a>
 <div class="nav-container">
+
       <nav>
         <ul class="nav-links">
-          <li>
+          {{!-- <li>
           <a href="/">HOME</a>
-          </li>
+          </li> --}}
            {{#if isLoggedIn}}
           <li>
             <a href="/watchlist">My Watchlist</a>
@@ -38,10 +42,11 @@
 {{/if}}
 
 {{#if isLoggedIn}}
-    </ul>    
+       
         <form action="/api/result" method="GET">
             <input type="text" placeholder="Search for movies" name="search" class="search">
         </form>
+         </ul>
         </nav>
    {{else}}
              <li>
